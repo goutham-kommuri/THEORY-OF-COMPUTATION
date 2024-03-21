@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Classification</title>
+</head>
+<body>
+    <h2>Spam Classification</h2>
+    <form id="spamForm">
+        <label for="message">Enter Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <button type="button" onclick="classifySpam()">Classify</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function classifySpam() {
+            var message = document.getElementById("message").value;
+            // Here you can implement your spam classification logic, either using JavaScript or by sending the message to a server for classification
+            // For demonstration purposes, let's assume a simple length-based classification
+            var classification = message.length > 50 ? "Spam" : "Not Spam";
+            document.getElementById("result").innerHTML = "Classification: " + classification;
+        }
+    </script>
+</body>
+</html>
